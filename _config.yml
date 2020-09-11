@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Matt Bracher-Smith"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : /assets/images/bio-photo.jpg
   bio              : "Husband and father by day. And also night. PhD Student in Psychiatric Genetics in my spare time."
   location         : "Cardiff, UK"
   email            :
