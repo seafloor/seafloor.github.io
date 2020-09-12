@@ -1,6 +1,6 @@
 ---
 title:  "CV"
-layout: default
+layout: archive
 permalink: /cv/
 author_profile: true
 comments: false
