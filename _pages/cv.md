@@ -1,7 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>CV</h1>
-  </body>
-</html>
+---
+permalink: /cv/
+---
