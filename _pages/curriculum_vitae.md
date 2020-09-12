@@ -1,7 +1,7 @@
 ---
 title:  "CV"
-layout: archive
-permalink: /cv/
+layout: page
+permalink: /curriculum_vitae/
 author_profile: true
 comments: false
 ------
