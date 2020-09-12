@@ -1,9 +1,8 @@
 ---
 title:  "About"
-layout: default
 permalink: /about/
 author_profile: true
-comments: False
+comments: false
 ---
 
 # About Me
