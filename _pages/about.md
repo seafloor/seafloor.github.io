@@ -1,9 +1,8 @@
 ---
 title:  "About"
-layout: page
+layout: single
 permalink: /about/
 author_profile: true
-layout: single
 comments: false
 ---
 
