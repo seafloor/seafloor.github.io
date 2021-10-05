@@ -1,7 +1,8 @@
 ---
 layout: single
-title:  “Beta Regression in Python“
+title:  "Beta Regression in Python"
 date:   2021-09-28
+
 ---
 
 # A little background
@@ -9,9 +10,9 @@ date:   2021-09-28
 I had a reason recently to run a beta regression and spent a little bit of time getting it up and running in `Python`. At the time [the latest release candidate for statsmodels](https://www.statsmodels.org/stable/index.html), with a [newly added implementation of beta regression](https://www.statsmodels.org/devel/generated/statsmodels.othermod.betareg.BetaModel.html), wasn’t released, so I had to make do with running `R` from `Python`. To be specific, what I wanted was to investigate model predictions by running a cross-validated beta regression. What I really wanted was to have everything running in `Python` but have the reliability of a beta regression package that had been out in the wild for a while with all the issues ironed out. That’s generally the dream - take any functionality that’s only available in `R` or another language and get it running in `Python`. This post will go through the basics of this with some sample code for getting it all up and running.
 
 # Beta regression
-First though, a valid question - what's a beta regression? It's a regression that assumes our outcome is [beta distributed](https://en.wikipedia.org/wiki/Beta_distribution), which makes it appropriate for values in the open interval (0, 1) (i.e. they can't actually be 0 or 1) such as rates, fractions, probabilities. The PDF for different values of alpha and beta, which parameterise the beta distribution, as shown below.
+First though, a valid question - what's a beta regression? It's a regression that assumes our outcome is [beta distributed](https://en.wikipedia.org/wiki/Beta_distribution), which makes it appropriate for values in the open interval (0, 1) (i.e. they can't actually be 0 or 1) such as rates, fractions, probabilities. The PDF for different values of alpha and beta, which parameterise the beta distribution, is shown below.
 
-![The Beta Distribution](figures/beta_distribution.png)
+![The Beta Distribution](/assets/images/beta_distribution.png)
 *The beta distribution PDF, lifted from wikipedia*
 
 As all the models I was using had been recalibrated using Platt scaling, this is what I had to work with. I also had predictions from a single model, rather than from each fold of cross-validation. This is nice as I could avoid the issue of having to running my cross-validated beta regression separately for each test fold, as model predictions from CV cannot just be combined. Before getting started I did hesitate as my instinct was to think that I could get a logistic regression to run as if my outcome were fractions and work the model this way. [This answer](https://stats.stackexchange.com/questions/29038/regression-for-an-outcome-ratio-or-fraction-between-0-and-1) on cross-validated helped assuage my worries, and I ultimately ran both but found much better prediction from the beta regression. This makes sense as it's much more flexible and can use different link functions, including logistic. More information on beta regression itself is available in [the 2004 paper by Ferrari and Cribari-Neto](https://www.ime.usp.br/~sferrari/beta.pdf) and in [the vignette for the R package I used](https://cran.r-project.org/web/packages/betareg/vignettes/betareg.pdf), `betareg`.
@@ -52,7 +53,7 @@ And now we just need to call this while converting data to be handled by R. This
     with localconverter(ro.default_converter + pandas2ri.converter):
         prediction, betas, r2, ll = beta_regression(train, test, r_formula)
 
-where the `r_formula` is the standard 'z ~ x1 + x2' notation for a glm in R. And now we have beta regression running in R! Originally I had a few more things being returned from this function, because I wanted p-values and standard errors, but I was looking at a pretty big dataset and this was causing a memory blow-up on the HPC cluster I couldn't solve quickly.
+where the `r_formula` is the standard 'y ~ x1 + x2' notation for a glm in R. And now we have beta regression running in R! Originally I had a few more things being returned from this function, because I wanted p-values and standard errors, but I was looking at a pretty big dataset and this was causing a memory blow-up on the HPC cluster I couldn't solve quickly.
 
 # Cross-validation (CV)
 Stepping things up a little, we might want to cross-validate our beta regression. One thing we could do is build a sklearn-compatible classifier so it can be used in pipelines. Right now I'm more interested in getting this off the ground than releasing a sklearn version for use (though I might do that soon!) so I've just manually set up basic CV and scaling. Incorporating the code from above, this gives us the function below, which can be called with one or more predictors. Yay! Note that I've got the notation of the outcome being labelled `y_pred` by default because I was using the model to see how well variables predicted model predictions (it makes sense, I swear). Unless you're also after this niche then `y_name` will be whatever your outcome is called.
