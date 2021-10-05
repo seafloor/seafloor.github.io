@@ -2,7 +2,10 @@
 layout: single
 title:  "Beta Regression in Python"
 date:   2021-09-28
-
+category:
+    statistics
+tags:
+    regression distributions python 
 ---
 
 # A little background
