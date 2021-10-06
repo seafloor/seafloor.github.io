@@ -1,3 +1,13 @@
+---
+layout: single
+title:  "Adjusting for base rates"
+date:   2021-10-01
+category:
+    machine learning
+tags:
+    calibration
+---
+
 A  common issue with predictions from models is that you've trained in a dataset where the base rate (or prevalence) is different to that in your target data. This might be because you had a big case-control dataset available for training where you think you can do well at learning but you actually want to apply it so a more population-based setting where prevalence is much lower. It might also happen if you've deliberately downsampled controls to mitigate class imbalance.
 
 Either way, it's an extremely common problem. So what to do?

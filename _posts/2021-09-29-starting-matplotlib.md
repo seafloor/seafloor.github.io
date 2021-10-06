@@ -59,4 +59,4 @@ I know there's some redundancy there, but it's what I *do* use, not necessarily 
 
 It doesn't get much more simple than that, but look at all that boilerplate just to get it to look reasonable! I love mpl's flexibility but it is a bit much. Lots would say swap to seaborn, and it helps, but I always need to drop down to mpl for a publication-quality plot. Always.
 
-I'll write some more posts in the coming weeks with more code for common plots that's ready to go (for your benefit, by mainly for future me!)
+I'll write some more posts in the coming weeks with more code for common plots that's ready to go (for your benefit, but mainly for future me!)
