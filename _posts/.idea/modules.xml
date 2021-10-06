@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../_drafts/.idea/_drafts.iml" filepath="$PROJECT_DIR$/../_drafts/.idea/_drafts.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/_posts.iml" filepath="$PROJECT_DIR$/.idea/_posts.iml" />
+      <module fileurl="file://$USER_HOME$/mlhelper/.idea/mlhelper.iml" filepath="$USER_HOME$/mlhelper/.idea/mlhelper.iml" />
     </modules>
   </component>
 </project>
