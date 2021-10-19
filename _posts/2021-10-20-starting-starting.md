@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Starting starting"
-date:   2021-10-02
+date:   2021-10-20
 category:
     general
 tags:

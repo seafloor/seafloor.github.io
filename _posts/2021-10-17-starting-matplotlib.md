@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Starting matplotlib"
-date:   2021-09-29
+date:   2021-10-17
 category:
     visualisation
 tags:
@@ -22,40 +22,46 @@ I'm going to assume that some sort of catplot, so categorical on one axis and co
 
 First, the common imports I need to write:
 
-    import matplotlib.pyplot as plt
-    import matplotlib.ticker as ticker
-    import matplotlib as mpl
-    import matplotlib.ticker as plticker
-    from matplotlib.patches import Rectangle
-    from matplotlib.collections import PatchCollection
-    import seaborn as sns
+```python
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+import matplotlib as mpl
+import matplotlib.ticker as plticker
+from matplotlib.patches import Rectangle
+from matplotlib.collections import PatchCollection
+import seaborn as sns
+```
+
 
 I know there's some redundancy there, but it's what I *do* use, not necessarily what I *should* use. Next up is the vanilla catplot:
 
-    fig, ax = plt.subplots(figsize=(14, 7))
-    labs = data.groupby('Predictors').median()['AUC']
-    ylims = data.groupby('Predictors').max()['AUC']
+```python
+fig, ax = plt.subplots(figsize=(14, 7))
+labs = data.groupby('Predictors').median()['AUC']
+ylims = data.groupby('Predictors').max()['AUC']
     
-    pal = [sns.color_palette()[i] for i in (0, 4, 9)]  # choose specific colours from palette
-    sns.boxenplot(x='Predictors', y='AUC', showfliers=False, palette=pal, dodge=False,
-                  hue='Data Type', data=df)
+pal = [sns.color_palette()[i] for i in (0, 4, 9)]  # choose specific colours from palette
+sns.boxenplot(x='Predictors', y='AUC', showfliers=False, palette=pal, dodge=False,
+              hue='Data Type', data=df)
     
-    # annotate mean scores 
-    _ = [ax.text(x=i, y=l+0.02, s='{:.2f}'.format(a), ha='center', fontsize=12) for i, (a, l) in enumerate(zip(labs, ylims))]
+# annotate mean scores 
+_ = [ax.text(x=i, y=l+0.02, s='{:.2f}'.format(a), ha='center', fontsize=12) for i, (a, l) in enumerate(zip(labs, ylims))]
     
-    # stick the legend outside the plot
-    ax.legend(bbox_to_anchor=(1, 1), frameon=False, title='Data Type', fontsize=14, title_fontsize=16)
+# stick the legend outside the plot
+ax.legend(bbox_to_anchor=(1, 1), frameon=False, title='Data Type', fontsize=14, title_fontsize=16)
     
-    plt.xticks(rotation=45)
-    ax.set_xlabel('Predictors', fontsize=18)
-    ax.set_ylabel('AUC', fontsize=18)
+plt.xticks(rotation=45)
+ax.set_xlabel('Predictors', fontsize=18)
+ax.set_ylabel('AUC', fontsize=18)
     
-    # here because I ALWAYS forgot how to rotate tick labels without calling
-    # ax.set_yticklabels()
-    plt.xticks(fontsize=12, rotation=15) 
-    plt.yticks(fontsize=12, rotation=0)
-    ax.axhline(y=0.5, linestyle='--', color='grey', alpha=0.6)
-    sns.despine()
+# here because I ALWAYS forgot how to rotate tick labels without calling
+# ax.set_yticklabels()
+plt.xticks(fontsize=12, rotation=15) 
+plt.yticks(fontsize=12, rotation=0)
+ax.axhline(y=0.5, linestyle='--', color='grey', alpha=0.6)
+sns.despine()
+```
+
 
 It doesn't get much more simple than that, but look at all that boilerplate just to get it to look reasonable! I love mpl's flexibility but it is a bit much. Lots would say swap to seaborn, and it helps, but I always need to drop down to mpl for a publication-quality plot. Always.
 

@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "100 days of blogging"
-date:   2021-09-27
+date:   2021-10-15
 category:
     general
 ---

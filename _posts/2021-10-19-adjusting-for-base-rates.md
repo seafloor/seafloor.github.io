@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Adjusting for base rates"
-date:   2021-10-01
+date:   2021-10-19
 category:
     machine learning
 tags:
@@ -22,17 +22,19 @@ The solution to this was [introduced by Elkan back in 2001](https://cseweb.ucsd.
 
 If you want to go through it in more detail you can check out the paper. In Python, this looks as shown below. Here i've assumed that you've passed predictions from the classifier in the new data as y_pred, and that base_rate and new_rate are the prevalence in the train and test data. Alternatively you can just pass y_true to these and it will compute the rates. Following that it does the transformation Elkan recommends, and we're done! 
 
-    def elkan_transform(y_pred, base_rate, new_rate):
-        # getting base_rate and new_rate
-        base_rate = base_rate if isinstance(base_rate, float) else np.mean(base_rate)
-        new_rate = new_rate if isinstance(new_rate, float) else np.mean(new_rate)
+```python
+def elkan_transform(y_pred, base_rate, new_rate):
+    # getting base_rate and new_rate
+    base_rate = base_rate if isinstance(base_rate, float) else np.mean(base_rate)
+    new_rate = new_rate if isinstance(new_rate, float) else np.mean(new_rate)
     
-        # Elkan's formula
-        numerator = y_pred - (y_pred * base_rate)
-        denominator = base_rate - (y_pred * base_rate) + (new_rate * y_pred) - (base_rate * new_rate)
-        frac = numerator / denominator
+    # Elkan's formula
+    numerator = y_pred - (y_pred * base_rate)
+    denominator = base_rate - (y_pred * base_rate) + (new_rate * y_pred) - (base_rate * new_rate)
+    frac = numerator / denominator
     
-        return new_rate * frac
+    return new_rate * frac
+```
 
 I should note that how good your new calibration plots look will depend partly on discrimination. Calibration improves at higher discrimination and you can't put predictions which are close to chance in AUC and expect a nice calibration curve after adjusting the probabilities. Otherwise I have always seen good results with this. I should also note that this does not account for any other issues like recalibration that is often needed for tree-based methods. This only adjusts for prevalence differences, not any other issues which might make our training data unrepresentative of the target population for the model. 
 

@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "My thesis was published!"
-date:   2021-09-30
+date:   2021-10-18
 category:
     general
 tags:
