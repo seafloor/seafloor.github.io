@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -20,7 +20,7 @@ title                    : "Dots and Squiggles"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Matt Bracher-Smith"
-description              : "An amazing website."
+description              : ""
 url                      : "https://seafloor.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Matt Bracher-Smith"
-  avatar           : /assets/images/dots_and_squiggles.png
+  avatar           : /assets/images/dots_and_squiggles.jpg
   bio              : "Husband and father by day. And also by night. Postdoctoral researcher applying machine learning to Alzheimer's disease genetics in my spare time. I write about things I like. Right now that's biostatistics, machine learning, and learning Mandarin."
   location         : "Cardiff, UK"
   email            :
