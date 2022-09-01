@@ -1,7 +1,7 @@
 ---
 title:  "Teaching"
 layout: single
-permalink: /cv/
+permalink: /teaching/
 author_profile: true
 comments: false
 ---
