@@ -27,3 +27,11 @@ See [my Google Scholar profile](https://scholar.google.com/citations?user=iRjM5g
 [forestplot](https://github.com/seafloor/forestplot) has a better name and a collection of code for static forest plots using matplotlib. Forest plots are almost always done in R, and I didn't want to leave Python, so here it is. This illustrates some of the depth of my matplotlib knowledge as it took a fair (and surprising) amount of customisation to get up and running.
 
 Check out [my github](https://github.com/seafloor) for more.
+
+## Education
+
+2016 - 2021: 1+3 PhD in Schizophrenia genetics at Cardiff University.
+
+2011 - 2014: Biochemistry Bsc (Hons). 1st.
+
+I'm not sure anyone wants to hear about my GCSEs and A-levels, so we'll leave it there.
