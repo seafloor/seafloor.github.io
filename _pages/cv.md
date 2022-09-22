@@ -16,15 +16,13 @@ Bracher-Smith, M., Crawford, K. & Escott-Price, V. [Machine learning for genetic
 
 My thesis, "Machine learning for genetic prediction of schizophrenia", available [here](https://orca.cardiff.ac.uk/143840/).
 
-## Recent contributing-author publications
-
 See [my Google Scholar profile](https://scholar.google.com/citations?user=iRjM5gsAAAAJ&hl=en) for an up-to-date list of publications.
 
 ## Sample GitHub libraries
 ### Visualisation
-[cnv_quant_vis](https://github.com/seafloor/cnv_quant_vis) Not the best-named, but runs fast Bokeh interactive plots for some large data. I had to use parquet files for quick column-wise access and implement the kde and rug plots myself as they were't in Bokeh by default at the time. On the GitHub page there is a follow-through link to the version hosted by Cardiff University so you can run it and see how it works.
+[cnv_quant_vis](https://github.com/seafloor/cnv_quant_vis) Runs fast Bokeh interactive plots with a large dataset. Uses parquet files for quick column-wise access and generates custom kde and rug plots.
 
-[forestplot](https://github.com/seafloor/forestplot) has a better name and a collection of code for static forest plots using matplotlib. Forest plots are almost always done in R, and I didn't want to leave Python, so here it is. This illustrates some of the depth of my matplotlib knowledge as it took a fair (and surprising) amount of customisation to get up and running.
+[forestplot](https://github.com/seafloor/forestplot) Static forest plots using matplotlib. Forest plots are almost always done in R, but this is all python. Illustrates some of the depth of my matplotlib knowledge as it took a fair amount of customisation.
 
 Check out [my github](https://github.com/seafloor) for more.
 
