@@ -8,6 +8,8 @@ tags:
     AI existential-risk
 ---
 
+![Probability](/assets/images/dice.jpg)
+
 I'm currently reading "The Precipice" by Toby Ord (review to follow), wherein he talks about the existential risks faced by humanity. By this he means risks that "threaten the destruction of humanity's potential". I don't agree with all the risks being considered here, but I agree with more thought going into them and ways to ensure they don't come to pass. So far so good. 
 
 In doing this, Ord considers a number of possible scenarios, separated into natural risks, anthropogenic risks, and future risks. Here comes the first issue: they are all future risks. Granted, there have been pandemics, nuclear weapon scares and climate-based extinction events in the (sometimes distant) past. But here we consider something which effectively shunts humanity to an inescapable trough from which it can never escape (and thus destroying its potential). As this has never happened, this is all a future risk. I understand the logic of separating out those events which threaten humanity now from those which will be able to threaten humanity in the future, but either way, it's all about prediction. And as Niels Bohr famously wrote, "prediction is very difficult, especially if it's about the future".
