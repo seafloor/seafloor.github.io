@@ -8,7 +8,7 @@ tags:
     AI existential-risk
 ---
 
-![Probability](/assets/images/dice.jpg)
+![Probability](/assets/images/dice.png)
 
 I'm currently reading "The Precipice" by Toby Ord (review to follow), wherein he talks about the existential risks faced by humanity. By this he means risks that "threaten the destruction of humanity's potential". I don't agree with all the risks being considered here, but I agree with more thought going into them and ways to ensure they don't come to pass. So far so good. 
 
