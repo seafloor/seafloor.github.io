@@ -6,6 +6,10 @@ main:
     url: /blog/
   - title: "Teaching"
     url: /teaching/
+  - title: "Books I've Read"
+    url: /books/
+  - title: "Code Snippets"
+    url: /code/
   - title: "About"
     url: /about/
   - title: "CV"
