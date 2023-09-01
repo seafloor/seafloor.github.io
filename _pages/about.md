@@ -6,7 +6,8 @@ author_profile: true
 comments: false
 ---
 
-<img style="float: right;" src="/assets/images/bio-photo.png">Why hello. Welcome to a page on me in a website by me. Here I'm going to talk about me (what else?) but in general I write about anything that interests me. That's naturally going to be things related to biostatistics because of my academic background (see below). Mostly in Python too, because for me the syntax is more elegant and intuitive than R, but sometimes I will write about analysis in R too. I still teach the tidyverse in R and use it occasionally, but my go-to choice is Python's SciPy stack. 
+# It's me. Hi.
+<img style="float: right;" src="/assets/images/bio-photo.png">Why hello. Welcome to a page about me, written by me, in a website made by me. Here I'm going to talk about me (what else?) but in general I write about anything that interests me. That's naturally going to be things related to biostatistics because of my academic background (see below). Mostly in Python too, because for me the syntax is more elegant and intuitive than R, but sometimes I will write about analysis in R too. I still teach the tidyverse in R and use it occasionally, but my go-to choice is Python's SciPy stack. 
 
 I will also write on a range of things I like to learn about in my spare time. The biggest of these is learning languages. Right now my focus is mandarin, which has been a life-long dream for me (particularly attaining good writing proficiency with Chinese characters in order to practice caligraphy), but also Chinese culture and history, the history of relations between the West and East Asia and how this plays into foreign policy, cooking plant-based food and lots more. Occasionally (and hopefully) the stars will align and I will write posts somehow merging these. Cue viral posts on Midjourney-generated vegan brunch ideas. No? More likely things likely plotting and modelling global data on things like health, language use etc.
 
