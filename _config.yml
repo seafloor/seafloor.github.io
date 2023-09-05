@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Matt Bracher-Smith"
-  avatar           : /assets/images/profile.jpg
+  avatar           : /assets/images/profile.jpeg
   bio              : "Husband and father by day. And also by night. Postdoctoral researcher applying machine learning to Alzheimer's disease genetics in my spare time. I write about things I like. Right now that's biostatistics, machine learning, and learning Mandarin."
   location         : "Cardiff, UK"
   email            :
