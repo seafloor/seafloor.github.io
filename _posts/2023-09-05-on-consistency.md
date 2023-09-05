@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "On consistency"
-date:   2023-09-01
+date:   2023-09-05
 category:
     Habits
 ---
