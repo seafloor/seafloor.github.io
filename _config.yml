@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "air" # "default", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Matt Bracher-Smith"
+title                    : "Maff Writes Things"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : ""
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Matt Bracher-Smith"
   avatar           : /assets/images/profile.jpeg
-  bio              : "Husband and father by day. And also by night. Postdoctoral researcher applying machine learning to Alzheimer's disease genetics in my spare time. I write about things I like. Right now that's biostatistics, machine learning, and learning Mandarin."
+  bio              : "Husband and father by day. And also by night. Heroic, handsome, selfless, humble. I've been called many things. Unfortunately none of them are listed here. I write about things and stuff. I'm trying to specialise a bit, so I might just write about things." 
   location         : "Cardiff, UK"
   email            :
   links:
