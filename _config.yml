@@ -280,3 +280,9 @@ defaults:
       comments: true
       share: true
       related: true
+
+# define collections
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
