@@ -8,9 +8,9 @@ category:
 
 ## The problem with parameters
 
-I remember the early years of my PhD when I was first running lots of comparisons of lots of models. I would have so many models, so many parameters. There wasn't just the tuning for models (mostly drawing from distributions for random search in cross-validation, but sometimes enumerated grids too), but also the huge range of simulations I ran. There's also another questions, another thing that can be changed, another question to answer. 
+I remember the early years of my PhD when I was first running lots of comparisons of lots of models. I would have so many models, so many parameters. There wasn't just the tuning for models (mostly drawing from distributions for random search in cross-validation, but sometimes enumerated grids too), but also the huge range of simulations I ran. There are always other questions, another thing that can be changed, another question to answer. 
 
-Does this effect I'm seeing level off when I saturate sample size? Is it driven by main effects? What if I introduce more realistic correlation between predictors? What if I degrade the signal to show poor genotyping quality (or poor predictor measurement in general)? I can see that there's an issue with *p >> n*, but is it really a fundamental issue with the model, or just a search problem in hyperparameter tuning? (*spoiler:* it's normally a search problem. There's a new shiny paper showing that they get 1% more AUC with there model? It's a minor change in optimisation. There's a big difference? They probably know how to tune their own model, or even developed it by testing on the same data, much better than the other one they didn't develop. Not that I'm pessimistic). 
+Does this effect I'm seeing level off when I saturate sample size? Is it driven by main effects? What if I introduce more realistic correlation between predictors? What if I degrade the signal to show poor genotyping quality (or poor predictor measurement in general)? I can see that there's an issue with *p >> n*, but is it really a fundamental issue with the model, or just a search problem in hyperparameter tuning? (*spoiler:* it's normally a search problem. There's a new shiny paper showing that they get 1% more AUC with their model? It's a minor change in optimisation. There's a big difference? They probably know how to tune their own model, or even developed it by testing on the same data, much better than the other one they didn't develop. Not that I'm pessimistic...). 
 
 So I had a lot of parameters to change. I dealt with this a in bunch of ways over the years: pull parameters to the top of a script to change, pass them as command line arguments with argparse or bash args, wrap it in a script where all the parameters go, set them as defaults in a function, write an exceptionally long bash script that takes named args (--like=this) etc. etc. 
 
@@ -22,7 +22,7 @@ If you're up to speed with things you'll be familiar with YAML files, and I was 
 
 ## But what *is* a YAML?
 
-First, if you're not in-the-know, then just understand that it's a mark-up language (a recursive acronym for "YAML Ain’t Markup Language", but which originally appeared as "Yet Another Markup Language" before changing into the modern acronym) that's designed to be standardised and more readable to humans than something like XML or JSON by using identation for structure. Scroll down to the latest specs [here](https://yaml.org/). To show how useful it is, just take a look at the XML below I pulled from a random google page:
+First, if you're not in-the-know, then just understand that it's a mark-up language (a recursive acronym for "YAML Ain’t Markup Language", but which originally appeared as "Yet Another Markup Language" before changing into the modern acronym) that's designed to be standardised and more readable for humans than something like XML or JSON by using identation for structure. Scroll down to the latest specs [here](https://yaml.org/). To show how useful it is, just take a look at the XML below I pulled from a random google page:
 
 ```
 <note>
@@ -43,7 +43,7 @@ note:
   body: Don't forget me this weekend!
 ```
 
-Now that's elegant. Easily readable and changeable. Now image a run with many different settings, but you never have to change your code for a new run. You only ever update the YAML. And it looks something like:
+Now that's elegant. Easily readable and changeable. Now imagine a run with many different settings, but you never have to change your code for a new run. You only ever update the YAML. And it looks something like:
 
 ```
 run:
@@ -72,7 +72,7 @@ Or something like that.
 
 You can stick all your requirements for a model in one place and then you don't have to mess with the code. This also helps with:
 
-- logging - a copy of the yaml can be saved with each run
+- logging - a copy of the YAML can be saved with each run
 - integration - workflow tools like snakemake often use yaml files
 - sharing - others can read something like this much faster
 - mistakes - easy to spot in a nice readable way
