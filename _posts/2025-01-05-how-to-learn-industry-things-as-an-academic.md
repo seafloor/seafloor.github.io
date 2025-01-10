@@ -3,7 +3,11 @@ layout: single
 title:  "How to learn industry things as an academic"
 date:   2025-01-05
 category:
-    R
+    academia
+tags:
+ - academia
+ - learning
+ - data engineering
 ---
 
 This is the blog equivalent of a William present, so-named after [Just William](https://en.wikipedia.org/wiki/Just_William_(book_series)), wherein you give someone a gift so that you can play with it yourself. This is a classic thing kids do when very young: trying to give their parents a birthday present that's the new octonauts toy set they want to play with. So this is my William present - a little overview of how to learn industry things as an academic. And really, it's a guide to me, from me, on how I can do these things better, as I set myself up to leave bioninformatics.
