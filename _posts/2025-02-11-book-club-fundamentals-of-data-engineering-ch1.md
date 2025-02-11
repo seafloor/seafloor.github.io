@@ -13,7 +13,7 @@ tags:
 
 This is first look at a book that seems to be recommended by many as essential for a good foundation in data engineering (DE). So while I go through the hoops of making sure my technical skills are up to speed for a career transition into DE, I'll also be going through the book here, chapter by chapter. 
 
-The book is ostensibly a lot more high-level than the other book I'm reviewing at the moment ([High Performance Python](https://www.amazon.co.uk/High-Performance-Python-Performant-Programming/dp/1492055026) by Micha Gorelick and Ian Ozwald - see my review of chapter 1 [here]()), so my notes are relatively few. Now that everyone has breathed a sigh of relief, we can dive in.
+The book is ostensibly a lot more high-level than the other book I'm reviewing at the moment ([High Performance Python](https://www.amazon.co.uk/High-Performance-Python-Performant-Programming/dp/1492055026) by Micha Gorelick and Ian Ozwald - see my review of chapter 1 [here](https://seafloor.github.io/book-club/book-club-high-performance-python-ch1)), so my notes are relatively few. Now that everyone has breathed a sigh of relief, we can dive in.
 
 ## What is data engineering?
 
