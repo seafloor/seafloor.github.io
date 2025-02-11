@@ -12,7 +12,7 @@ tags:
 
 Today I took the first step in pushing for a more formal understanding of optimisation in Python. I often need things to run faster or with lower memory, but achieving this comes down to interactively checking things with `memory_profiler` and `%memit` in ipython, or the built-in `%timeit`, comparing different versions of functions and going from there. 
 
-Now I know this is suboptimal. I know I need to do things more formally, but finding the time to push for learning this in your everyday job is hard. So here's my first step - chapter 1 of a book club going through the whole of [High Performance Python]() by Micha Gorelick and Ian Ozwald. I'll be going through the whole book and summarising the main points as I go. Mainly for me, but also as a mini-summary for others.
+Now I know this is suboptimal. I know I need to do things more formally, but finding the time to push for learning this in your everyday job is hard. So here's my first step - chapter 1 of a book club going through the whole of [High Performance Python](https://www.amazon.co.uk/High-Performance-Python-Performant-Programming/dp/1492055026) by Micha Gorelick and Ian Ozwald. I'll be going through the whole book and summarising the main points as I go. Mainly for me, but also as a mini-summary for others.
 
 The main stand-out points for me were:
 
